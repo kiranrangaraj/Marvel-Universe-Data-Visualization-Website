@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Marvel Universe Network</title>
+  <link rel="icon" href="./Marvel.png" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="./style4.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <div id="mySidenav" class="sidenav">
+    <a href="./index.html" id="home">HOME</a>
+    <a href="./about.html" id="about">ABOUT</a>
+    <a href="./universe.html" id="universe">MARVEL NETWORK</a>
+    <a href="./powerGrid.html" id="powerGrid">SUPERHERO POWER GRID</a>
+    <a href="./superpowerAbilities.html" id="superpowerAbilities">SUPERPOWER ABILITIES</a>  
+  </div>
+</head>
+
+<body class="container text-center">
+  <!-- header -->
+  <header class="page-header">
+    <h1>Marvel Universe's Superhero Network</h1>
+    <p class="text-small">Marvel Has Created An Expansive Multiverse that Has Over 7000 Characters. Who Are the Main One's?</p>
+  </header>
+    <h2>Each bubble below represents a separate Marvel character. The bubble sizes increase proportionally to the number of connections a character 
+      has in the universe. Mouseover any of the bubbles to see their basic information. </h2>
+
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+  <!-- Color palette -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- Create a div where the graph will take place -->
+  <div id="MarvelNetwork"></div>
+
+  <style>
+  .node:hover{
+    stroke-width: 7px !important;
+    opacity: 1 !important;
+  }
+  </style>
+  <!-- footer -->
+  <footer>
+    <p><a href="https://github.com/kiranrangaraj/Project-2" target="_blank">Marvel Visualization</a> by Kiran Rangaraj, 2021<br />
+      <a href="https://github.com/kiranrangaraj" target="_blank"><i class="fa fa-github"></i></a> |
+      <a href="https://www.linkedin.com/in/kiran-rangaraj-38286718a/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </p>
+  </footer>
+
+</body>
+<script>
+
+  // set the dimensions and margins of the graph
+  var width = 1060
+  var height = 1060
+  
+  // append the svg object to the body of the page
+  var svg = d3.select("#MarvelNetwork")
+    .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+  
+  // Read data
+  d3.csv("marvel_universe.csv", function(data) {
+  
+    // Filter a bit the data -> more than 1 million inhabitants
+    data = data.filter(function(d){ return d.Connections>0 })
+  
+    // Color palette for continents?
+    var color = d3.scaleOrdinal()
+      .domain([0,1500])
+      .range(["#000000","#020102","#030103","#050205","#070206","#080308","#0a030a","#0b040c","#0c050e","#0e050f","#0f0611","#100713","#110815","#120817","#130919","#140a1b","#150b1d","#160c1f","#160d21","#170e23","#180f25","#181027","#191129","#19122b","#19132d","#1a142f","#1a1631","#1a1733","#1a1835","#1b1a36","#1b1b38","#1b1c3a","#1b1e3b","#1b1f3d","#1a213e","#1a2240","#1a2441","#1a2543","#1a2744","#192845","#192a46","#192c47","#192d48","#182f49","#18314a","#18324b","#17344c","#17364c","#17374d","#16394d","#163b4e","#163d4e","#163f4e","#16404e","#15424e","#15444f","#15464e","#15474e","#15494e","#154b4e","#154d4e","#154e4d","#15504d","#15524c","#16534c","#16554b","#16574b","#17584a","#175a49","#185b48","#195d48","#195e47","#1a6046","#1b6145","#1c6344","#1d6443","#1e6542","#1f6741","#206840","#22693f","#236a3e","#256b3d","#266c3c","#286d3b","#2a6e3a","#2b6f39","#2d7038","#2f7137","#317236","#337335","#357435","#387434","#3a7533","#3c7632","#3f7632","#417731","#447731","#467830","#497830","#4c792f","#4e792f","#51792f","#54792f","#577a2f","#5a7a2f","#5d7a2f","#607a2f","#637a2f","#667a30","#697b30","#6c7b31","#6f7b31","#727b32","#757b33","#787b34","#7b7a35","#7e7a36","#817a37","#847a38","#877a3a","#8a7a3b","#8d7a3d","#907a3e","#937a40","#967a42","#997944","#9c7946","#9f7948","#a1794a","#a4794c","#a7794f","#a97951","#ac7954","#ae7956","#b17959","#b3795b","#b5795e","#b77961","#b97964","#bc7967","#be796a","#bf796d","#c17a70","#c37a73","#c57a76","#c67a79","#c87b7c","#c97b7f","#ca7c83","#cc7c86","#cd7d89","#ce7d8c","#cf7e8f","#d07e93","#d17f96","#d18099","#d2809c","#d381a0","#d382a3","#d383a6","#d484a9","#d485ac","#d486af","#d487b2","#d588b5","#d589b8","#d48abb","#d48cbe","#d48dc1","#d48ec3","#d490c6","#d391c9","#d392cb","#d294ce","#d295d0","#d297d2","#d198d4","#d09ad7","#d09cd9","#cf9ddb","#cf9fdd","#cea1df","#cda2e0","#cca4e2","#cca6e4","#cba8e5","#caa9e7","#caabe8","#c9ade9","#c8afea","#c8b1ec","#c7b2ed","#c6b4ee","#c6b6ee","#c5b8ef","#c5baf0","#c4bcf1","#c4bdf1","#c3bff2","#c3c1f2","#c2c3f2","#c2c5f3","#c2c6f3","#c2c8f3","#c1caf3","#c1ccf3","#c1cdf3","#c1cff3","#c1d1f3","#c2d2f3","#c2d4f3","#c2d6f3","#c2d7f3","#c3d9f3","#c3daf2","#c4dcf2","#c4ddf2","#c5dff2","#c6e0f1","#c6e1f1","#c7e3f1","#c8e4f0","#c9e5f0","#cae7f0","#cbe8f0","#cce9ef","#cdeaef","#cfebef","#d0ecef","#d1edef","#d3eeef","#d4efef","#d6f0ef","#d7f1ef","#d9f2ef","#dbf3ef","#dcf3ef","#def4ef","#e0f5f0","#e2f6f0","#e3f6f0","#e5f7f1","#e7f8f1","#e9f8f2","#ebf9f3","#edfaf4","#effaf4","#f0fbf5","#f2fbf6","#f4fcf7","#f6fcf8","#f8fdfa","#fafdfb","#fbfefc","#fdfefe","#ffffff"]);
+  
+    // Size scale for countries
+    var size = d3.scaleLinear()
+      .domain([0, 1500])
+      .range([0,80])  // circle will be between 7 and 55 px wide
+  
+    // create a tooltip
+    var Tooltip = d3.select("#MarvelNetwork")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "2px")
+      .style("border-radius", "5px")
+      .style("padding", "5px")
+  
+    // Three function that change the tooltip when user hover / move / leave a cell
+    var mouseover = function(d) {
+      Tooltip
+        .style("opacity", 1)
+    }
+    var mousemove = function(d) {
+      Tooltip
+        .html('<u>' + d.Name + '</u>' + "<br>" + d.Connections + " connections" + "<br>" + d.Identity + "<br>" + d.Alignment)
+        .style("left", (d3.mouse(this)[0]+20) + "px")
+        .style("top", (d3.mouse(this)[1]) + "px")
+    }
+    var mouseleave = function(d) {
+      Tooltip
+        .style("opacity", 0)
+    }
+  
+    // Initialize the circle: all located at the center of the svg area
+    var node = svg.append("g")
+      .selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("class", "node")
+        .attr("r", function(d){ return size(d.Connections)})
+        .attr("cx", width / 2)
+        .attr("cy", height / 2)
+        .style("fill", function(d){ return color(d.Connections)})
+        .style("fill-opacity", 0.8)
+        .attr("stroke", "black")
+        .style("stroke-width", 1)
+        .on("mouseover", mouseover) // What to do when hovered
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+        .call(d3.drag() // call specific function when circle is dragged
+             .on("start", dragstarted)
+             .on("drag", dragged)
+             .on("end", dragended));
+  
+    // Features of the forces applied to the nodes:
+    var simulation = d3.forceSimulation()
+        .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+        .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
+        .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.Connections)+3) }).iterations(1)) // Force that avoids circle overlapping
+  
+    // Apply these forces to the nodes and update their positions.
+    // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
+    simulation
+        .nodes(data)
+        .on("tick", function(d){
+          node
+              .attr("cx", function(d){ return d.x; })
+              .attr("cy", function(d){ return d.y; })
+        });
+  
+    // What happens when a circle is dragged?
+    function dragstarted(d) {
+      if (!d3.event.active) simulation.alphaTarget(.03).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+    function dragged(d) {
+      d.fx = d3.event.x;
+      d.fy = d3.event.y;
+    }
+    function dragended(d) {
+      if (!d3.event.active) simulation.alphaTarget(.03);
+      d.fx = null;
+      d.fy = null;
+    }
+  
+  })
+  
+  </script>

@@ -1,0 +1,55 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #b4ababad;
+  }
+  html {
+    overflow-y: scroll;
+  }
+  h1 {
+    color: rgb(41, 41, 41);
+    font-weight: 600;
+    font-size: 3.3em;
+  }
+  h2 {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 12px;
+  }
+  h3 {
+    color: rgb(155, 13, 13);
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-bottom: 10px;
+  } 
+  footer a,
+  footer a:hover, footer a:visited {
+    color: #D2A000;
+  }
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  footer {
+    color: white;
+    padding-top: 5px;
+    border-top: 1px solid gray;
+    font-size: 12px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: black;
+    text-align: center;
+  }
+  .bar {
+    fill: rgb(0, 32, 102);
+  }
+  .bar:hover {
+    fill: rgb(143, 0, 0);
+  }
