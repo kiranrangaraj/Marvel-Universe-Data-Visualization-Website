@@ -54,7 +54,7 @@ Marvel Images:
 * CSS 3
 * Javascript
 * Bootstrap
-* D3.json
+* D3.js
 * D3-tip.js
 * CSV file
 * SQL
