@@ -1,7 +1,7 @@
 # Project-2 - Marvel Universe Data Visualization
 ## Kiran Rangaraj
 Vanderbilt Data Analytics Bootcamp, Trilogy Education
-![Home] (/Home.png)
+![Home] (Images/Marvel/Home.png)
 
 ## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
 
@@ -21,7 +21,7 @@ The different tabs sequentially navigate you from one interactive visualization 
 
 ## Webpages ##
 ### Marvel Universe's Superhero Network ###
-![Marvel Network](/Marvel Network.png)
+![Marvel Network](Images/Marvel Network.png)
 Marvel Has Created An Expansive Multiverse that Has Over 7000 Characters. Here we examine who the main characters are based off of the number of other superheroes they are connected to. Kaggle data sets containing data on the individual superhero connections was transformed into a CSV format that was used to create a D3.js force-directed bubble chart. Bubble sizes are proportional to the number of connections each superhero has, enabling immediate viewing of the most-connected superheroes. Mouseover aspects allow each node/bubble character information to be viewed.
 
 ## Top 20 Power Grid Comparison ##
