@@ -18,8 +18,7 @@ The different tabs sequentially navigate you from one interactive visualization 
 ## Webpages ##
 ### About ###
 ![About](Images/About.png)
-Brief historical information regarding character demographics and creation is visualized in donut and bar charts. D3.js was used to generate these diagrams.
-12,940 characters were statistically evaluated based on their alignments (good, bad, neutral) versus their gender and identity (public, secret, no dual - no alias/alter ego). The donut charts below illustrate the proportions of this categorical data in the Marvel Universe. Marvel Comic's rich 82-year timespan has prolifically produced over 7,000 characters--maybe more than 50,000 counting one-off and ancillary superheroes, villains, and other mutants. The bar graph below shows the number of characters produced each year until 2013. While the late 50's only produced a few new characters, the early 90's produced the most. 554 characters were born in 1993 alone, the highest of any single year.
+Brief historical information regarding character demographics and creation was visualized in donut and bar charts. D3.js was used to generate these diagrams. 12,940 characters were statistically evaluated based on their alignments (good, bad, neutral) versus their gender and identity (public, secret, no dual - no alias/alter ego). The donut charts illustrate the proportions of this categorical data in the Marvel Universe. Marvel Comic's rich 82-year timespan has prolifically produced over 7,000 characters--maybe more than 50,000 counting one-off and ancillary superheroes, villains, and other mutants. The bar graph shows the number of characters produced each year until 2013. While the late 50's only produced a few new characters, the early 90's produced the most. 554 characters were born in 1993 alone, the highest of any single year.
 
 
 ### Marvel Universe's Superhero Network ###
