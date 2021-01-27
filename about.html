@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>About</title>
+  <link rel="icon" href="./Marvel.png" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="./style2.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <div id="mySidenav" class="sidenav">
+    <a href="./index.html" id="home">HOME</a>
+    <a href="./about.html" id="about">ABOUT</a>
+    <a href="./universe.html" id="universe">MARVEL NETWORK</a>
+    <a href="./powerGrid.html" id="powerGrid">SUPERHERO POWER GRID</a>
+    <a href="./superpowerAbilities.html" id="superpowerAbilities">SUPERPOWER ABILITIES</a>  
+  </div>
+  <style>
+    #center {
+      text-align: center;
+    }
+    .toolTip {
+      position: absolute;
+      display: none;
+      min-width: 80px;
+      height: auto;
+      background: none repeat scroll 0 0 #ffffff;
+      border: 1px solid #6F257F;
+      padding: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+
+        <!-- header -->
+        <header class="page-header">
+          <h1>About</h1>
+          <h2></h2>
+        </header>
+      <img class="pic3" src="./Marvel_profiles.jpg" alt="" >
+      </div>
+      <div class="col-xs-12 text-center"> 
+        <p class="text">Since its creation in 1939 by Martin Goodman, Marvel Comics has grown into a huge blockbuster entity that creates cinematic renditions of its most famous 
+          characters whose stories were humbly created in comic books several decades before. The Marvel era officially begain in 1961, when the company launched the The Fantastic 
+          Four and superhero titles created by Stan Lee amongst others. Stan Lee is responsible for creating Marvel's most well-known superheroes such as Captain America, Spider-Man, 
+          Iron Man, Wolverine, the Hulk, Thor, Ant-Man (Giant), the Wasp, Doctor Strange, Scarlet Witch, Invisible Woman, and Thing. Most of Marvel's fictional characters operate in a
+          single reality known as the Marvel Universe, though this universe has been further depicted as being comprised of a "multiverse" of thousands of separate universes.</p><hr> 
+          
+        <p class="text">This data visualization project delves into the universe, initially looking at its general history, its complex entirity, and then specifics on the 20 
+          most-networked and well-known superheros, as well as what makes them superheroes in the first place. Datasets on character history and demographics were initially 
+          obtained from Kaggle and Marvel's official wiki. Databases were then created from the initial CSV files, which employed Python via Jupyter Notebook, Microsoft Excel, and SQL. 
+          D3.js was used extensively to create the interactive visualizations seen here via HTML, CSS, and Javascript.</p><hr>
+        
+        <p class="text">The different tabs sequentially navigate you from one interactive visualization to the next. User prompts are highlighted in red above each visualization.</p><hr>
+
+        <p class="text"><b>Data sets Used:</b><br>
+        https://www.kaggle.com/dannielr/marvel-superheroes?select=charcters_stats.csv<br>
+        https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset?select=marvel-wikia-data.csv<br>
+        https://marvel.fandom.com/wiki/Power_Grid<br>
+        <b>Marvel Images:</b><br>
+        https://img.wallpapersafari.com/desktop/1920/1080/44/13/g1NGvx.jpg<br>
+        https://wallpaperset.com/w/full/d/6/8/526989.jpg</p><br><br>
+
+      <div id="center">
+      <h3>12,940 characters were statistically evaluated based on their alignments (good, bad, neutral) versus their gender and identity (public, secret, no dual - no alias/alter ego).
+        The donut charts below illustrate the proportions of this categorical data in the Marvel Universe.</h3></div>
+      <div class="col-xs-6 text-center">
+        <!-- Load d3.js & color scale -->
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+      </div>
+      <div class="col-xs-6 text-center">  
+        <div id="my_dataviz2"></div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class id="col-xs-12">
+      <div id="center">
+        <h3>Marvel Comic's rich 82-year timespan has prolifically produced over 7,000 characters--maybe more than 50,000 counting one-off and ancillary superheroes, villains, and other mutants. 
+        The bar graph below shows the number of characters produced each year until 2013. While the late 50's only produced a few new characters, the early 90's produced the most. 554 
+        characters were born in 1993 alone, the highest of any single year.</h3></div>
+        <div id="tooltip"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <p><a href="https://github.com/kiranrangaraj/Project-2" target="_blank">Marvel Visualization</a> by Kiran Rangaraj, 2021<br />
+      <a href="https://github.com/kiranrangaraj" target="_blank"><i class="fa fa-github"></i></a> |
+      <a href="https://www.linkedin.com/in/kiran-rangaraj-38286718a/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </p>
+  </footer>
+
+  <!-- scripts -->
+  <script src="./about.js"></script>
+  <script src="./about2.js"></script>
+  <script src="./about3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  
+</body>
+
+</html>
+
