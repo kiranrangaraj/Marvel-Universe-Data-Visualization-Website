@@ -36,7 +36,7 @@ What Kinds of Superpowers Do the Top 20 Superheroes have Amongst All of the Supe
 Data sets on each superheroes superpowers were utilized to generate this hierarchical edge bundling D3.js visualization. Each top 20 superhero and superpower ability in the Marvel Universe was charted as a node along a circular axis. Source and Target relationships between each superhero and their superpowers was mapped. Hierarchical edge bundling allows to visualize adjacency relations between entities organized in a hierarchy. The idea is to bundle the adjacency edges together to decrease the clutter usually observed in complex networks. 
 
 ## Sources ##
-Data sets Used:
+Data Sets Used:
 * https://www.kaggle.com/dannielr/marvel-superheroes?select=charcters_stats.csv
 * https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset?select=marvel-wikia-data.csv
 * https://marvel.fandom.com/wiki/Power_Grid
