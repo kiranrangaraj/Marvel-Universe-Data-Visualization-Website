@@ -27,7 +27,7 @@ Brief historical information regarding character demographics and creation is vi
 
 
 ### Marvel Universe's Superhero Network ###
-![Marvel Network](Images/MarvelNetwork.png)
+![Marvel Network](Images/MarvelUniverse.png)
 
 Marvel Has Created An Expansive Multiverse that Has Over 7000 Characters. Here we examine who the main characters are based off of the number of other superheroes they are connected to. Kaggle data sets containing data on the individual superhero connections was transformed into a CSV format that was used to create a D3.js force-directed bubble chart. Bubble sizes are proportional to the number of connections each superhero has, enabling immediate viewing of the most-connected superheroes. Mouseover aspects allow each node/bubble character information to be viewed.
 
