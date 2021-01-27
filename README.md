@@ -1,9 +1,7 @@
 # Project-2 - Marvel Universe Data Visualization
-## Kiran Rangaraj
-Vanderbilt Data Analytics Bootcamp, Trilogy Education
-![Home](Images/Home.png)
-
 ## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
+## Kiran Rangaraj ##
+![Home](Images/Home.png)
 
 ## SUMMARY ##
 * *Overview* *
