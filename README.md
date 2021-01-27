@@ -1,6 +1,5 @@
-# Project-2 - Marvel Universe Data Visualization
+# Project-2  Marvel Universe Data Visualization
 ## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
-## Kiran Rangaraj ##
 ![Home](Images/Home.png)
 
 ## SUMMARY ##
@@ -63,3 +62,6 @@ Marvel Images:
 * SQL
 * Python
 * Microsoft Excel
+
+## Author ##
+* Kiran Rangaraj - Data Analytics Bootcamp - Vanderbilt University - 2021
