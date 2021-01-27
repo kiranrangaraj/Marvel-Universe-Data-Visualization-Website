@@ -1,7 +1,7 @@
 # Project-2 - Marvel Universe Data Visualization
 ## Kiran Rangaraj
 Vanderbilt Data Analytics Bootcamp, Trilogy Education
-![Home] (Images/Marvel/Home.png)
+![Home](Images/Home.png)
 
 ## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
 
@@ -22,16 +22,19 @@ The different tabs sequentially navigate you from one interactive visualization 
 ## Webpages ##
 ### Marvel Universe's Superhero Network ###
 ![Marvel Network](Images/Marvel Network.png)
+
 Marvel Has Created An Expansive Multiverse that Has Over 7000 Characters. Here we examine who the main characters are based off of the number of other superheroes they are connected to. Kaggle data sets containing data on the individual superhero connections was transformed into a CSV format that was used to create a D3.js force-directed bubble chart. Bubble sizes are proportional to the number of connections each superhero has, enabling immediate viewing of the most-connected superheroes. Mouseover aspects allow each node/bubble character information to be viewed.
 
 ## Top 20 Power Grid Comparison ##
-![Power Grid] (/Power Grid.png)
+![Power Grid](Images/Power Grid.png)
+
 Going off of the networking visualization just discussed, the 20 most networked superheroes are looked at in terms of their actual superhero abilities.
 The Power Grid is an official ranking system used by Marvel to quantify characters in 7 key areas of prowess: Intelligence, Strength, Speed, Durability, Energy Projection, and Fighting Ability.  In all 7 areas, 1 represents the lowest and 7 the highest rank achievable.
 Using D3.js, a radar/spider/web chart was generated from power grid rankings of the top 20 characters. This a two-dimensional chart type designed to plot one or more series of values over multiple quantitative variables. Each variable has its own axis, all axes are joined in the center of the figure. Each character can be selected for individually, and the chart can be adjusted according to specific configuration parameters. Mouseover aspects allow for power grid ranks scores at each node.
 
 ## Top 20 Superpower Abilities Comparison ##
-![Superpower Abilities] (/Superpower Abilities.png)
+![Superpower Abilities](Images/Superpower Abilities.png)
+
 What Kinds of Superpowers Do the Top 20 Superheroes have Amongst All of the Superpowers in the Marvel Universe?
 Data sets on each superheroes superpowers were utilized to generate this hierarchical edge bundling D3.js visualization. Each top 20 superhero and superpower ability in the Marvel Universe was charted as a node along a circular axis. Source and Target relationships between each superhero and their superpowers was mapped. Hierarchical edge bundling allows to visualize adjacency relations between entities organized in a hierarchy. The idea is to bundle the adjacency edges together to decrease the clutter usually observed in complex networks. 
 
