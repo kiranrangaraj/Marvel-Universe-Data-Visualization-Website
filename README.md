@@ -3,10 +3,10 @@
 ![Home](Images/Home.png)
 
 ## SUMMARY ##
-* *Overview* *
-* *Webpages* *
-* *Sources* *
-* *Technologies Used* *
+* *Overview* 
+* *Webpages* 
+* *Sources* 
+* *Technologies Used* 
 
 ## Overview ##
 Since its creation in 1939 by Martin Goodman, Marvel Comics has grown into a huge blockbuster entity that creates cinematic renditions of its most famous superhero characters whose stories were humbly created in comic books several decades before. The Marvel era officially begain in 1961, when the company launched the The Fantastic Four and superhero titles created by Stan Lee amongst others. Stan Lee is regarded as the father of Marvel Comics since he created Marvel's most well-known superheroes such as Captain America, Spider-Man, Iron Man, Wolverine, the Hulk, Thor, Ant-Man (Giant), the Wasp, Doctor Strange, Scarlet Witch, Invisible Woman, and Thing. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, though this universe has been further depicted as being comprised of a "multiverse" of thousands of separate universes.
