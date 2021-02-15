@@ -1,12 +1,14 @@
 # Project-2:  Marvel Universe Data Visualization
 ![Home](Images/Home.png)
 ## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
+---
 
 ## SUMMARY ##
 * *Overview* 
 * *Webpages* 
 * *Sources* 
 * *Technologies Used* 
+---
 
 ## Overview ##
 Since its creation in 1939 by Martin Goodman, Marvel Comics has grown into a huge blockbuster entity that creates cinematic renditions of its most famous superhero characters whose stories were humbly created in comic books several decades before. The Marvel era officially begain in 1961, when the company launched the The Fantastic Four and superhero titles created by Stan Lee amongst others. Stan Lee is regarded as the father of Marvel Comics since he created Marvel's most well-known superheroes such as Captain America, Spider-Man, Iron Man, Wolverine, the Hulk, Thor, Ant-Man (Giant), the Wasp, Doctor Strange, Scarlet Witch, Invisible Woman, and Thing. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, though this universe has been further depicted as being comprised of a "multiverse" of thousands of separate universes.
@@ -14,6 +16,8 @@ Since its creation in 1939 by Martin Goodman, Marvel Comics has grown into a hug
 This data visualization project delves into the universe, initially looking at its general history, its complex entirity, and then specifics on the 20 most-networked and well-known superheros, as well as what makes them superheroes in the first place. Datasets on character history and demographics were initially obtained from Kaggle and Marvel's official wiki. Databases were then created from the initial CSV files, which employed Python via Jupyter Notebook, Microsoft Excel, and SQL. D3.js was used extensively to create the interactive visualizations seen here via HTML, CSS, and Javascript.
 
 The different tabs sequentially navigate you from one interactive visualization to the next. User prompts are highlighted in red above each visualization.
+
+---
 
 ## Webpages ##
 ### About ###
@@ -37,7 +41,9 @@ Using D3.js, a radar/spider/web chart was generated from power grid rankings of 
 ![Superpower Abilities](Images/SuperpowerAbilities.png)
 
 What kinds of superpowers do the top 20 superheroes have amongst all of the superpowers in the Marvel Universe?
-Data sets on each superheroes superpowers were utilized to generate this hierarchical edge bundling D3.js visualization. Each top 20 superhero and every superpower ability in the Marvel Universe was charted as a node along a circular axis. Source and Target relationships between each superhero and their superpowers was mapped. Hierarchical edge bundling allows to visualize adjacency relations between entities organized in a hierarchy. The idea is to bundle the adjacency edges together to decrease the clutter usually observed in complex networks. 
+Data sets on each superheroes superpowers were utilized to generate this hierarchical edge bundling D3.js visualization. Each top 20 superhero and every superpower ability in the Marvel Universe was charted as a node along a circular axis. Source and Target relationships between each superhero and their superpowers was mapped. Hierarchical edge bundling allows to visualize adjacency relations between entities organized in a hierarchy. The idea is to bundle the adjacency edges together to decrease the clutter usually observed in complex networks.
+
+---
 
 ## Sources ##
 Data Sets Used:
@@ -48,6 +54,8 @@ Data Sets Used:
 Marvel Images:
 * https://img.wallpapersafari.com/desktop/1920/1080/44/13/g1NGvx.jpg
 * https://wallpaperset.com/w/full/d/6/8/526989.jpg
+
+---
 
 ## Technologies used ##
 * HTML 5
@@ -60,6 +68,8 @@ Marvel Images:
 * SQL
 * Python
 * Microsoft Excel
+
+---
 
 ## Author ##
 * Kiran Rangaraj - Data Analytics Bootcamp - Vanderbilt University - 2021
