@@ -1,6 +1,6 @@
 # Project-2:  Marvel Universe Data Visualization
 ![Home](Images/Home.png)
-## Github Page Link: https://kiranrangaraj.github.io/Project-2/ ##
+## Website: https://kiranrangaraj.github.io/Project-2/ ##
 ---
 
 ## SUMMARY ##
