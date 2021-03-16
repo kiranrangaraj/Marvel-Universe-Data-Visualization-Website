@@ -1,4 +1,4 @@
-# Project-2:  Marvel Universe Data Visualization
+# Marvel Universe Data Visualization Website
 ![Home](Images/Home.png)
 
 <p align="center">
