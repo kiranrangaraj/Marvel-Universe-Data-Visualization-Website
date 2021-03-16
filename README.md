@@ -4,6 +4,7 @@
 <p align="center">
   <a href="https://kiranrangaraj.github.io/Marvel-Universe-Data-Visualization-Website/">Visit Website</a>
 </p>
+
 ---
 
 ## SUMMARY ##
@@ -11,6 +12,7 @@
 * *Webpages* 
 * *Sources* 
 * *Technologies Used* 
+
 ---
 
 ## Overview ##
